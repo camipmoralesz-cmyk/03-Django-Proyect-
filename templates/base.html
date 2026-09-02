@@ -1,0 +1,14 @@
+#aca vamos a crear la vista de la pagina principal
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %} #Esto es para poder cargar los archivos estaticos como css, js, imagenes, etc
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Django TEMPLATES Proyect{% endblock %}</title> #aca se va a renderizar el titulo de la pagina principal
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> #aca se va a cargar el archivo css que se encuentra en la carpeta static/css
+</head>
+<body>
+    
+</body>
+</html>
