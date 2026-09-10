@@ -1,0 +1,30 @@
+<!-- #aca vamos a crear la vista de la pagina principal -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %} <!-- #Esto es para poder cargar los archivos estaticos como css, js, imagenes, etc -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Django TEMPLATES Proyect{% endblock %}</title> <!-- #aca se va a renderizar el titulo de la pagina principal -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!--#aca se va a cargar el archivo css que se encuentra en la carpeta static/css -->
+</head>
+<body>
+    <!-- #aca vamos a crear el header de la pagina principal, que va a contener un menu de navegacion con 3 links, y un titulo de la pagina principal*/ -->
+    <!-- #header nav ul li -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'inicio:index' %}">inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %} <!-- aca se va a renderizar el contenido de la pagina principal -->
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Derechos reservados</p> 
+    </footer>
+
+</body>
+</html>
